@@ -82,6 +82,11 @@ body.modern-ui.go .smsc-topnav nav,
 	color: #f40;
 }
 
+.topnav__menu-arrow::before,
+.topnav__menu-arrow::after {
+	border-color: #940 transparent !important;
+}
+
 .js-notif-close {
 	border-radius: 20px !important;
 	background-color: #333;
@@ -176,7 +181,7 @@ body.modern-ui.go .smsc-topnav nav,
 
 .smsc-topnav .topnav__menu {
 	background-color: #222;
-	border-color: #666;
+	border-color: #940
 }
 
 #notificationToaster {
@@ -404,9 +409,7 @@ body.modern-ui .homepage .course__list .course__image:hover {
 }
 
 .smsc-contextmenu-arrow::after,
-.smsc-contextmenu-arrow::before,
-.topnav__menu-arrow::before,
-.topnav__menu-arrow::after {
+.smsc-contextmenu-arrow::before {
 	border-color: #940 transparent !important;
 }
 
@@ -420,7 +423,21 @@ body.modern-ui .homepage .course__list .course__image:hover {
 }
 
 .news__feed__button {
+	transition: background 150ms;
 	width: 100%;
+}
+
+.ui-widget-content,.ui-dialog, .ui-dialog-titlebar {
+	background-color: #333;
+	border-color: #666 !important;
+}
+
+.ui-dialog-titlebar{
+	border: none;
+}
+
+.newsDialog__center{
+	color: #FFF;
 }
 }
 
@@ -908,6 +925,7 @@ body.modern-ui,
 
 .msgcell__parent-td .messageframe {
 	height: 98%;
+	overflow: hidden;
 }
 
 #newltoptable .messageframe {
@@ -1194,6 +1212,12 @@ div.wborder.wbright {
 	border-radius: 5px;
 	border: 1px solid #666;
 	background-color: #444;
+	-ms-overflow-style: none !important;
+	scrollbar-width: none !important;
+}
+
+::-webkit-scrollbar {
+	display: none;
 }
 
 #infoContainerNoteContent {
@@ -1213,6 +1237,18 @@ div.wborder.wbright {
 	border: 1px solid #666;
 	background-color: #333 !important;
 	width: 100% !important;
+}
+#infoContainerAssignments, .infoContainerBlock {
+	background-color: #333 !important;
+}
+
+#infoContainerAssignments {
+	border-radius: 8px;
+	border: 1px solid #666
+}
+
+.infoContainerButton{
+	background: #333 !important;
 }
 
 .gradient_window {
